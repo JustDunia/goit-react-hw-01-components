@@ -17,7 +17,7 @@ const Statistics = ({ title, data }) => {
 };
 
 Statistics.propTypes = {
-  data: propTypes.array,
+  data: propTypes.array.isRequired,
   title: propTypes.string,
 };
 

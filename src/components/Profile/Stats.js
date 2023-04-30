@@ -19,7 +19,7 @@ const Stats = ({ stats }) => (
 );
 
 Stats.propTypes = {
-  stats: propTypes.object,
+  stats: propTypes.object.isRequired,
 };
 
 export default Stats;

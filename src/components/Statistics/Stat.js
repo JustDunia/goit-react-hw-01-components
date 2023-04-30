@@ -11,8 +11,8 @@ const Stat = ({ label, num }) => {
 };
 
 Stat.propTypes = {
-  label: propTypes.string,
-  num: propTypes.number,
+  label: propTypes.string.isRequired,
+  num: propTypes.number.isRequired,
 };
 
 export default Stat;
