@@ -1,0 +1,7 @@
+.trow:nth-child(2n) {
+  background-color: rgb(231, 230, 230);
+}
+
+.tcell {
+  padding-block: 10px;
+}

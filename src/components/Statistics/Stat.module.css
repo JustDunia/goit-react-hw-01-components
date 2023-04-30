@@ -1,0 +1,19 @@
+.item {
+  width: calc(100% / 4);
+  padding-block: 20px;
+  text-align: center;
+  background-color: #9962ff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.label,
+.percentage {
+  display: block;
+  color: #fff;
+}
+
+.percentage {
+  margin-top: 10px;
+  font-size: 24px;
+}
