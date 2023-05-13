@@ -1,25 +1,29 @@
-import css from './Profile.module.css';
+import styles from './Profile.module.css';
 import propTypes from 'prop-types';
-import Stats from './Stats';
+import { ProfileStatistics } from './ProfileStatistics';
 
-const Profile = ({ username, tag, location, avatar, stats }) => (
-  <div className={css.profile}>
-    <div className={css.description}>
-      <img src={avatar} alt="User avatar" className={css.avatar} />
-      <p className={css.name}>{username}</p>
-      <p className={css.tag}>@{tag}</p>
-      <p className={css.location}>{location}</p>
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+  return (
+    <div className={styles.profile}>
+      <div className={styles.description}>
+        <img src={avatar} alt="User avatar" className={styles.avatar} />
+        <p className={styles.name}>{username}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
+      <ProfileStatistics stats={stats} />
     </div>
-    <Stats stats={stats} />
-  </div>
-);
+  );
+};
 
 Profile.propTypes = {
   username: propTypes.string.isRequired,
   tag: propTypes.string.isRequired,
   location: propTypes.string.isRequired,
   avatar: propTypes.string.isRequired,
-  stats: propTypes.object.isRequired,
+  stats: propTypes.shape({
+    followers: propTypes.number.isRequired,
+    views: propTypes.number.isRequired,
+    likes: propTypes.number.isRequired,
+  }),
 };
-
-export default Profile;

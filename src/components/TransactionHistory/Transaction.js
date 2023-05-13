@@ -1,12 +1,12 @@
-import css from './Transaction.module.css';
+import styles from './Transaction.module.css';
 import propTypes from 'prop-types';
 
-const Transaction = ({ type, amount, currency }) => {
+export const Transaction = ({ type, amount, currency }) => {
   return (
-    <tr className={css.trow}>
-      <td className={css.tcell}>{type}</td>
-      <td className={css.tcell}>{amount}</td>
-      <td className={css.tcell}>{currency}</td>
+    <tr className={styles.trow}>
+      <td className={styles.tcell}>{type}</td>
+      <td className={styles.tcell}>{amount}</td>
+      <td className={styles.tcell}>{currency}</td>
     </tr>
   );
 };
@@ -16,5 +16,3 @@ Transaction.propTypes = {
   amount: propTypes.string.isRequired,
   currency: propTypes.string.isRequired,
 };
-
-export default Transaction;
